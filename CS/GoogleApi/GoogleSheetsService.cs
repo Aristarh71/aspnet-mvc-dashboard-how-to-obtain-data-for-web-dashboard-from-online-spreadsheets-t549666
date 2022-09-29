@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net.Http;
 
@@ -70,7 +70,6 @@ namespace GoogleApi {
             RefreshHeaders();
         }
 
-        #region IDisposable
 
         public void Dispose() {
             if(this.client != null) {
@@ -78,7 +77,6 @@ namespace GoogleApi {
             }
         }
 
-        #endregion
 
         string AuthorizationHeaderValue { get { return "Bearer " + this.AccessToken; } }
 
